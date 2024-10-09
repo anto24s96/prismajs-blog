@@ -1,0 +1,21 @@
+{
+  "name": "prismajs-blog",
+  "version": "1.0.0",
+  "description": "Create un nuovo progetto Node.js (senza Express) ed installate la Prisma CLI e il Prisma Client.",
+  "main": "app.js",
+  "scripts": {
+    "migrate": "prisma migrate dev --name",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "prisma": "^5.20.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "slugify": "^1.6.6"
+  }
+}
