@@ -2,7 +2,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const slugify = require("slugify");
 
-//funzione per creare il post
+//Funzione per creare il post
 const createPost = (
     title,
     image,
@@ -42,7 +42,7 @@ const createPost = (
         });
 };
 
-//funzione per leggere il post tramite slug
+//Funzione per leggere il post tramite slug
 const getPostBySlug = (slug) => {
     prisma.post
         .findUnique({
@@ -64,7 +64,7 @@ const getPostBySlug = (slug) => {
         });
 };
 
-//funzione per leggere tutti post
+//Funzione per leggere tutti post
 const getAllPosts = () => {
     prisma.post
         .findMany({
@@ -85,7 +85,7 @@ const getAllPosts = () => {
         });
 };
 
-//funzione per leggere solo i post pubblicati
+//Funzione per leggere solo i post pubblicati
 const getPostPublished = () => {
     prisma.post
         .findMany({
@@ -109,7 +109,7 @@ const getPostPublished = () => {
         });
 };
 
-//funzione per aggiornare il post
+//Funzione per aggiornare il post
 const updatePost = (id, title, content, published, categoryId, tags) => {
     const updateData = {};
 
@@ -152,7 +152,7 @@ const updatePost = (id, title, content, published, categoryId, tags) => {
         });
 };
 
-//funzione per eliminare il post
+//Funzione per eliminare il post
 const deletePost = (id) => {
     prisma.post
         .delete({
